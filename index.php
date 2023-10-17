@@ -1,15 +1,5 @@
 <?php
 
-echo "Hello World!";
-$query = new WP_Query(array('post_type' => 'post'));
-
-if ($query->have_posts()) {
-    while ($query->have_posts()) {
-        $query->the_post();
-        echo "<br>" + get_the_title();
-    }
-} else {
-    echo 'No posts found';
-}
+echo "Hello World! Use the Rest API to access the posts: /wp-json/wp/v2/posts";
 
 wp_reset_postdata();
