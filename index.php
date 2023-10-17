@@ -1,5 +1,4 @@
 <?php
-// Silence is golden.
 
 echo "Hello World!";
 $query = new WP_Query(array('post_type' => 'post'));
