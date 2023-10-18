@@ -1,5 +1,8 @@
 <?php
 
+// Allow Featured Images
+add_theme_support('post-thumbnails');
+
 // No index for this site
 function stop_robots_indexing()
 {
