@@ -1,5 +1,5 @@
 <?php
 
-echo "Hello World! Use the Rest API to access the posts: /wp-json/wp/v2/posts";
+echo "<p>Hello World! Use the Rest API to access the posts: /wp-json/wp/v2/posts</p>";
 
-wp_reset_postdata();
+echo "<p>Please install the <a href='https://wordpress.org/plugins/advanced-custom-fields/'>Advanced Custom Fields Plugin and update `functions.php` to provide custom post types.</p>";
