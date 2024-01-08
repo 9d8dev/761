@@ -15,9 +15,18 @@ function stop_robots_indexing()
 }
 add_action('init', 'stop_robots_indexing');
 
-// create custom post type 
+// Redirect all traffic to login page
+function redirect_to_login() {
+    if (!is_user_logged_in()) {
+        wp_redirect(wp_login_url());
+        exit;
+    }
+}
+add_action('template_redirect', 'redirect_to_login');
+
+// create custom post type
 // function create_custom_api_post_type() {
-//     register_post_type('api', 
+//     register_post_type('api',
 //         array(
 //             'labels' => array(
 //                 'name' => __('APIs'),
@@ -25,13 +34,13 @@ add_action('init', 'stop_robots_indexing');
 //             ),
 //             'public' => true,
 //             'has_archive' => true,
-//             'rewrite' => array('slug' => 'api'), 
+//             'rewrite' => array('slug' => 'api'),
 //             'show_in_rest' => true,
 //             'supports' => array(
 //                 'title',
 //                 'editor',
 //                 'thumbnail',
-//                 'custom-fields', 
+//                 'custom-fields',
 //             ),
 //         )
 //     );
