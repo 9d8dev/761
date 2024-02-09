@@ -15,15 +15,6 @@ function stop_robots_indexing()
 }
 add_action('init', 'stop_robots_indexing');
 
-// Redirect all traffic to login page
-function redirect_to_login() {
-    if (!is_user_logged_in()) {
-        wp_redirect(wp_login_url());
-        exit;
-    }
-}
-add_action('template_redirect', 'redirect_to_login');
-
 // create custom post type
 // function create_custom_api_post_type() {
 //     register_post_type('api',
