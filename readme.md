@@ -12,6 +12,8 @@ This repository hosts an empty WordPress theme designed for use with a Headless 
 
 ### Usage
 
+> [How to Enable the WP Rest API]([url](https://www.perplexity.ai/page/Enable-the-WordPress-AnWC3ErbTzuT42iHORUI9g))
+
 - Download the repository as a `.zip` file and upload it to your WordPress site as a theme. Activate the theme and you're ready to go!
 - Install `Advanced Custom Fields` and enable the RestAPI for ACF. This will allow you to use ACF fields in your headless application.
 - Use `functions.php` to create custom post types and taxonomies. You can also use this file to create custom endpoints for your headless application.
