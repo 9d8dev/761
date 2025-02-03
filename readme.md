@@ -2,7 +2,7 @@
 
 ## Headless Theme for Fjord and Mach1
 
-This repository hosts an empty WordPress theme designed for use with a Headless WordPress workflow. It's a joint venture by [Bridger Tower](https://bridger.to) and [Cameron Youngblood](https://cameronyoungblood.com) for [Alpine Codex](https://alpinecodex.com).
+This repository hosts an empty WordPress theme designed for use with a Headless WordPress workflow. It's a joint venture by [Bridger Tower](https://bridger.to) and [Cameron Youngblood](https://cameronyoungblood.com) at [9d8](https://9d8.dev).
 
 ### Project Structure
 - `functions.php`: Your functions file
