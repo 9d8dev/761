@@ -15,6 +15,40 @@ function stop_robots_indexing()
 }
 add_action('init', 'stop_robots_indexing');
 
+// Enhanced search engine blocking
+function enhanced_search_engine_blocking() {
+    // Send noindex header
+    header('X-Robots-Tag: noindex, nofollow', true);
+
+    // Disable XML-RPC
+    add_filter('xmlrpc_enabled', '__return_false');
+
+    // Remove REST API links from head
+    remove_action('wp_head', 'rest_output_link_wp_head', 10);
+    remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
+
+    // Remove all RSS feed links
+    remove_action('wp_head', 'feed_links', 2);
+    remove_action('wp_head', 'feed_links_extra', 3);
+
+    // Remove WP version
+    remove_action('wp_head', 'wp_generator');
+
+    // Disable author pages
+    if (is_author()) {
+        wp_redirect(home_url(), 301);
+        exit;
+    }
+}
+add_action('init', 'enhanced_search_engine_blocking');
+
+// Modify REST API headers to prevent indexing
+function add_noindex_header_to_rest_api($response) {
+    $response->header('X-Robots-Tag', 'noindex, nofollow');
+    return $response;
+}
+add_filter('rest_pre_serve_request', 'add_noindex_header_to_rest_api');
+
 // create custom post type
 // function create_custom_api_post_type() {
 //     register_post_type('api',
