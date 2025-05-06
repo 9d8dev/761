@@ -1,6 +1,6 @@
 # 761 Headless WordPress Theme
 
-## Headless Theme for Fjord and Mach1
+## Headless Theme for use with [next-wp](https://next-wp.com)
 
 This repository hosts an empty WordPress theme designed for use with a Headless WordPress workflow. It's a joint venture by [Bridger Tower](https://bridger.to) and [Cameron Youngblood](https://cameronyoungblood.com) at [9d8](https://9d8.dev).
 
